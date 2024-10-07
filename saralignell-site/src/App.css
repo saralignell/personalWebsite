@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #E8C8FB;
+    color: white;
+  }
+  h2 {
+    font-size: 2.5rem;
+    color: #E8C8FB;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  p {
+    color: white;
+    font-family: 'Inter', sans-serif;
+  }
+  .app {
+    text-align: center;
+  }
+  
+  .navbar {
+    background-color: (0, 0, 0, 0.7);
+    padding: 10px;
+    padding-bottom: 0px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    
+  }
+  
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+  
+  .navbar ul li {
+    margin: 0 20px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+  }
+  
+  .navbar ul li a:hover {
+    color: #E8C8FB;
+  }
+  
+  .landing {
+    height: 100vh;
+    background: url('https://your-image-url') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .landing h1 {
+    font-size: 4rem;
+    color: #E8C8FB;
+  }
+  
+  .landing p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  main {
+    margin-top: 80px;
+  }
+  

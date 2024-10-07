@@ -1,0 +1,32 @@
+.landing-container {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    background-color: #E8C8FB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden; /* Make sure nothing overflows */
+  }
+  
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    z-index: 10; /* Make sure it stays on top */
+  }
+  
+  .floating-text {
+    position: absolute; /* Absolute position within container */
+    transition: transform 2s ease-in-out; /* Smooth transition */
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .bold {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  

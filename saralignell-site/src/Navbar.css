@@ -1,0 +1,13 @@
+.navbar {
+    background-color: #E8C8FB;
+  }
+  
+  .navbar-title {
+    flex-grow: 1;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .navbar-links button {
+    font-family: 'Inter', sans-serif;
+  }
+  

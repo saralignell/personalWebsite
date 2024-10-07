@@ -1,0 +1,73 @@
+.work-experience-container {
+  padding: 50px;
+  background-color: #E8C8FB; /* Matches the page background */
+}
+
+h2 {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: white; /* Card background */
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03); /* Slight enlargement on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+}
+
+.project-image {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.project-content {
+  padding: 20px;
+  color: #E8C8FB; /* Text matches the background color */
+  font-family: 'Inter', sans-serif;
+  width: 60%;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #E8C8FB;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-image {
+    width: 100%;
+  }
+
+  .project-content {
+    width: 100%;
+  }
+}
