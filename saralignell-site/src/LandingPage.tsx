@@ -45,11 +45,14 @@ const LandingPage: React.FC = () => {
   return (
     <div className="landing-container">
       <h1>Sara Lignell is:</h1>
-      {floatingTexts.map((text, index) => (
-        <div key={index} className={`floating-text ${index % 2 === 0 ? 'bold' : ''}`}>
-          {text}
-        </div>
-      ))}
+      <div className="floating-text-wrapper"> 
+        <div className="floating-text-overlay"></div> {/* Gradient overlay */}
+        {floatingTexts.map((text, index) => (
+          <div key={index} className={`floating-text ${index % 2 === 0 ? 'bold' : ''}`}>
+            {text}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

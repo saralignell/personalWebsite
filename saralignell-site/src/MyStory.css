@@ -1,5 +1,14 @@
+body, html {
+    overflow: hidden; /* Disable scrolling for the entire page */
+    height: 100%;     /* Ensure the body takes the full viewport height */
+    margin: 0;        /* Remove any default margin */
+    padding: 0;       /* Remove any default padding */
+  }
+
 .my-story-container {
-    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 0px;
     background-color: #E8C8FB; /* Ensure background is not white */
   }
   
