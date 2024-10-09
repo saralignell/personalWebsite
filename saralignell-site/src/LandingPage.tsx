@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './LandingPage.css';
+import { Link } from 'react-router-dom';
 
 const floatingTexts = [
   "a frontend developer", "a junior at Georgetown", 
@@ -12,9 +13,11 @@ const floatingTexts = [
 ];
 
 const LandingPage: React.FC = () => {
+  const [finalTextVisible, setFinalTextVisible] = useState(false); // Track whether to show the final text and buttons
+
   useEffect(() => {
     const textElements = document.querySelectorAll('.floating-text');
-    
+
     const moveText = (text: HTMLElement) => {
       const maxX = window.innerWidth - text.offsetWidth;  // Width bound
       const maxY = window.innerHeight - text.offsetHeight; // Height bound
@@ -22,23 +25,31 @@ const LandingPage: React.FC = () => {
       const x = Math.random() * maxX; // Random horizontal position
       const y = Math.random() * maxY; // Random vertical position
 
-      // Ensuring the text stays within screen boundaries
       text.style.transform = `translate(${x}px, ${y}px)`;
     };
 
-    textElements.forEach((text) => {
-      moveText(text as HTMLElement); // Move text initially
-      setInterval(() => moveText(text as HTMLElement), 5000); // Move every 5 seconds
-    });
-
-    // Handle window resize event
-    const handleResize = () => {
-      textElements.forEach((text) => moveText(text as HTMLElement)); // Reposition on resize
+    const startMovingText = () => {
+      textElements.forEach((text) => {
+        moveText(text as HTMLElement); // Move text initially
+        setInterval(() => moveText(text as HTMLElement), 2000); // Move every 2 seconds
+      });
     };
 
-    window.addEventListener('resize', handleResize);
+    startMovingText();
+
+    const timeoutId = setTimeout(() => {
+      textElements.forEach((text) => {
+        (text as HTMLElement).style.transition = "all 2s ease";
+        (text as HTMLElement).style.transform = `translate(50vw, 40vh)`; // Move all text closer
+      });
+
+      setTimeout(() => {
+        setFinalTextVisible(true); // Show final text and buttons
+      }, 1000); // After text comes together, fade in the final text
+    }, 8000); // 10 seconds delay before merging text
+
     return () => {
-      window.removeEventListener('resize', handleResize); // Cleanup listener
+      clearTimeout(timeoutId); // Cleanup on unmount
     };
   }, []);
 
@@ -47,12 +58,24 @@ const LandingPage: React.FC = () => {
       <h1>Sara Lignell is:</h1>
       <div className="floating-text-wrapper"> 
         <div className="floating-text-overlay"></div> {/* Gradient overlay */}
-        {floatingTexts.map((text, index) => (
-          <div key={index} className={`floating-text ${index % 2 === 0 ? 'bold' : ''}`}>
-            {text}
-          </div>
-        ))}
+        {!finalTextVisible ? (
+          floatingTexts.map((text, index) => (
+            <div key={index} className={`floating-text ${index % 2 === 0 ? 'bold' : ''}`}>
+              {text}
+            </div>
+          ))
+        ) : (
+          <h1 className="final-text fade-in">probably making something right now</h1>
+        )}
       </div>
+
+      {/* Display buttons only after animation is complete */}
+      {finalTextVisible && (
+        <div className="landing-buttons">
+          <Link to="/my-story" className="landing-button">My Story</Link>
+          <Link to="/my-experience" className="landing-button">My Experience</Link>
+        </div>
+      )}
     </div>
   );
 };

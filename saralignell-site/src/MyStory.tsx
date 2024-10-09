@@ -1,5 +1,12 @@
 import React from 'react';
 import './MyStory.css';
+import downArrow from './assets/DownArrows.svg'; 
+import MyStoryText from './assets/MyStoryText.svg';
+import rippedTexture from './assets/Rippedtexture.svg'
+import journalIteslf from './assets/JournalItself.svg'
+import journalPen from './assets/FountainPen.svg'
+
+
 
 const MyStory: React.FC = () => {
   return (
@@ -16,11 +23,53 @@ const MyStory: React.FC = () => {
           <source src="https://s3-figma-videos-production-sig.figma.com/video/1329158448900003468/TEAM/e2a2/213c/-50b0-4f12-8add-92f5d6bf578f?Expires=1729468800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kbtzo8~rWCANb-oROBxBi0d4xsc-OGgbQUu14frqSo7GOMm9x6RCmlmFHfR-qLTVFBwv5Z7wFHcvdBsUBykAmY6h1z-wzA-Y5~1cpPaoiisgBry42k3r9dfvZQHaWucQ1Buyd1XkZA10z06UC6LrNpx9K9fVbPhGLkUrO5AmOw8rilSov5qOrXw-i4y3wsJR6bb4CrIHY5y6xw105lZZxR1jOApHzekyDK-P-fugEQTwuSB5nBPaAzaF69NKBmiU8-NrCAKnq9kHx~bSaSd8OT60haUIwcHyq2bcGdnPhZ2A~OBVLT8NACqliZsOf~Rk5WVVn2ONNaV6hYvUj2TdNw__" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        </div>
+        <div className="my-story-text">
+          <img src={MyStoryText} alt="My Story" />
+        </div>
+        <div className="down-arrow">
+          <img src={downArrow} alt="Down Arrow" />
+        </div>
+        <div className="page-crumple">
+          <img src={rippedTexture} alt="Ripped Texture" />
+        </div>
+        <div className="journal-page">
+          <img src={journalIteslf} alt="Journal Page" />
+        </div>
+        <div className="journal-pen">
+          <img src={journalPen} alt="Journal Pen" />
+        </div>
+
+
+
+
+      
+      <div className="journal-text-section">
+        <p>I started software development because I love making things. 
+         I build things build things all the time. Sew things, Woodwork, Lasercut, code, 3-dprint, cnc routing. I am a student manager at the Georgetown Makerhub. 
+         
+         I love building things I am passionate about. I love creating experiences people remember. 
+         
+         I am a leader, and refelectior. I Have journaled every day since of college (starting august 19 2022) and I cant wait to see whats next. </p>
       </div>
-      <div className="text-section resizable">
-        <h2>My Story</h2>
-        <p>This is where you tell your story. You can write about your journey, passions, and what drives you as a developer.</p>
+      <div className="journal-text-section">
+        <p> Me beyone my resume
+            - I teach around 20 kids every sunday teaching private and group swim lessons 
+            - I am on board of the german club, cordinating german cultural events and embassy visits
+            - I am a user-experience advisor and shareholder of a sustainable baby goods ecomerse site set to launch 
+            - In summer of 2023 I worked cutting cakes and serving refeshment at a alpine cafe in bavaria 
+            - I run recreationaly now, I was previosly a competitive runner on a relay ranked 10th nationally
+            - My favorite classes I have taken in college are: 
+                -   Intro to design
+                -   Algorithms
+                -   Intro to Tech Ethics and Society
+                -   Advanced Programming   
+                -   Creating and making, the moral craft of life (Ignatious seminar)
+            
+        </p>
       </div>
+
+
     </div>
   );
 };
