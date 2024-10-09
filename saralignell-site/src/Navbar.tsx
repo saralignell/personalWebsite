@@ -11,12 +11,12 @@ const Navbar: React.FC = () => {
     <AppBar position="static" className="navbar" color="transparent">
       <Toolbar>
         <Typography variant="h6" className="navbar-title">
-          Sara Lignell
+          <Button color="inherit" component={Link} to="/">Sara Lignell</Button>
         </Typography>
         <div className="navbar-links">
-          <Button color="inherit" component={Link} to="/">Home</Button>
-          <Button color="inherit" component={Link} to="/work-experience">Work Experience</Button>
-          <Button color="inherit" component={Link} to="/my-story">My Story</Button>
+          <Button color="inherit" component={Link} to="/work-experience">Work</Button>
+          <Typography variant="body1"> / </Typography> {/* Separator */}
+          <Button color="inherit" component={Link} to="/my-story">Story</Button>
         </div>
       </Toolbar>
     </AppBar>

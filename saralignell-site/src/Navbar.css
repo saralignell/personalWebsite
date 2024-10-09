@@ -1,13 +1,23 @@
 .navbar {
-    background-color: #E8C8FB;
-  }
-  
-  .navbar-title {
-    flex-grow: 1;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .navbar-links button {
-    font-family: 'Inter', sans-serif;
-  }
-  
+  background-color: #E8C8FB;
+}
+
+.navbar-title {
+  flex-grow: 1; /* This pushes the links to the right */
+  font-family: 'Inter', sans-serif;
+  display: inline-block; /* Ensure the title is treated as inline */
+}
+
+.navbar-links {
+  display: flex; /* Use flexbox to keep links on one line */
+  align-items: center; /* Vertically center the links and separator */
+}
+
+.navbar-links button {
+  font-family: 'Inter', sans-serif;
+  margin: 0 5px; /* Add space around buttons */
+}
+
+.navbar-links typography {
+  margin: 0 5px; /* Add space around the separator ("/") */
+}

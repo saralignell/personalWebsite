@@ -40,7 +40,7 @@ const LandingPage: React.FC = () => {
     const timeoutId = setTimeout(() => {
       textElements.forEach((text) => {
         (text as HTMLElement).style.transition = "transform 3s ease-in-out, opacity 3s ease-in-out"; // Smoother transition for movement and opacity
-        (text as HTMLElement).style.transform = `translate(50vw, 40vh)`; // Move all text closer
+        (text as HTMLElement).style.transform = `translate(39vw, 40vh)`; // Move all text closer
         (text as HTMLElement).style.opacity = "0"; // Fade out floating text
       });
 
