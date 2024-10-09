@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden; /* Disable horizontal scrolling */
+}
 
 .my-story-container {
     padding-left: 15rem;
