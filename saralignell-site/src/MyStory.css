@@ -6,7 +6,7 @@ body{
     padding-left: 15rem;
     padding-right: 15rem;
     padding-top: 0px;
-    background-color: #E8C8FB; /* Ensure background is not white */
+  
   }
   
   .video-container {
@@ -49,7 +49,7 @@ body{
     overflow: auto; /* Handle any overflow during resizing */
     max-width: 100%; /* Ensure resizing is responsive */
     padding: 20px;
-    background-color: #E8C8FB;
+
     border-radius: 10px;
     font-family: 'Inter', sans-serif;
     color: white;

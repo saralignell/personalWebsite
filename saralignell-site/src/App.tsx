@@ -8,6 +8,7 @@ import './App.css';
 
 const App: React.FC = () => {
   return (
+    
     <Router>
       <Navbar /> {/* Navbar will now appear on every page */}
       <Routes>
