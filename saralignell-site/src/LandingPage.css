@@ -26,6 +26,7 @@ h1 {
     font-size: 1.5rem;
     text-align: center;
     font-family: 'Inter', sans-serif;
+    opacity: 1;
 }
 
 .floating-text-overlay {
@@ -83,14 +84,19 @@ h1 {
 }
 
 .final-text {
-    font-size: 3rem;
+    font-size: 4.5rem;
     text-align: center;
-    top: 18rem;
+    top: 16rem;
     color: white;
     font-family: 'Inter', sans-serif;
     z-index: 10;
+    opacity: 1;
+    transform: scale(0.5);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-.fade-in {
+.slow-fade-in {
     opacity: 1; /* Show the final text */
+    transform: scale(.75); /* Grow final text to normal size */
 }
+

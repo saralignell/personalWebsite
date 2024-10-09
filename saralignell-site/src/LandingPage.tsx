@@ -39,14 +39,15 @@ const LandingPage: React.FC = () => {
 
     const timeoutId = setTimeout(() => {
       textElements.forEach((text) => {
-        (text as HTMLElement).style.transition = "all 2s ease";
+        (text as HTMLElement).style.transition = "transform 3s ease-in-out, opacity 3s ease-in-out"; // Smoother transition for movement and opacity
         (text as HTMLElement).style.transform = `translate(50vw, 40vh)`; // Move all text closer
+        (text as HTMLElement).style.opacity = "0"; // Fade out floating text
       });
 
       setTimeout(() => {
         setFinalTextVisible(true); // Show final text and buttons
-      }, 1000); // After text comes together, fade in the final text
-    }, 8000); // 10 seconds delay before merging text
+      }, 3000); // Delay showing final text until floating text fades out
+    }, 6000); // 10 seconds delay before merging text
 
     return () => {
       clearTimeout(timeoutId); // Cleanup on unmount
@@ -65,7 +66,7 @@ const LandingPage: React.FC = () => {
             </div>
           ))
         ) : (
-          <h1 className="final-text fade-in">probably making something right now</h1>
+          <h1 className="final-text slow-fade-in">probably making something right now</h1> // Use the slower fade-in class
         )}
       </div>
 

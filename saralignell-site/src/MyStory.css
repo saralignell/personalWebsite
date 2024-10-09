@@ -91,17 +91,15 @@
    width: 80%;
   }
 
-  .text-section {
+  .journal-text-section {
     display: flex;
     
     position: absolute;
-    bottom: -22rem; /* Position at the bottom of the video */
+    bottom: -23rem; /* Position at the bottom of the video */
     z-index: 10;
    width: 80%;
 
   }
 
 
-
-  
   
