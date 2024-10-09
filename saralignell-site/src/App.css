@@ -22,12 +22,14 @@ body {
   }
   
   .navbar {
-    background-color: (0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     padding-bottom: 0px;
     position: fixed;
     width: 100%;
     top: 0;
+    box-shadow: none !important;
+    
     
   }
   
@@ -35,6 +37,7 @@ body {
     display: flex;
     justify-content: center;
     list-style-type: none;
+    
   }
   
   .navbar ul li {
