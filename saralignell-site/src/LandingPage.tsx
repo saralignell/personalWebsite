@@ -65,10 +65,10 @@ const LandingPage: React.FC = () => {
 
     startMovingText();
 
-        // Start the countdown
-        const countdownInterval = setInterval(() => {
-          setCountdown(prevCountdown => prevCountdown - 1);
-        }, 1000);
+    // Start the countdown
+    const countdownInterval = setInterval(() => {
+      setCountdown((prevCountdown) => prevCountdown - 1);
+    }, 1000);
 
     const timeoutId = setTimeout(() => {
       textElements.forEach((text) => {
@@ -77,21 +77,19 @@ const LandingPage: React.FC = () => {
         (text as HTMLElement).style.opacity = "0"; // Fade out floating text
       });
 
-     // Show final text immediately after floating text fades out
-     setFinalTextVisible(true);
+      setTimeout(() => {
+        setFinalTextVisible(true);
+        setTimeout(() => {
+          scrollToProjects(); // Add 0.5 second delay before scrolling to project section
+        }, 500); // 0.5 second delay before auto-scrolling
+      }, 3000);
+    }, 10000); // 10 seconds delay (countdown duration)
 
-     // Add 0.5 second delay before auto-scrolling to the project section
-     setTimeout(() => {
-       scrollToProjects(); // Auto-scroll to projects after 0.5 seconds
-     }, 1000); // 0.5 second delay before auto-scroll
-   }, 10000); // 10 seconds delay (countdown duration)
-
-   return () => {
-     clearTimeout(timeoutId);
-     clearInterval(countdownInterval);
-   };
- }, []);
-
+    return () => {
+      clearTimeout(timeoutId);
+      clearInterval(countdownInterval);
+    };
+  }, []);
 
   return (
     <div>

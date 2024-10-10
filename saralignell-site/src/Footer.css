@@ -1,0 +1,43 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #E8C8FB; /* Purple background */
+    color: white; /* White text */
+    font-size: 0.8rem;
+  }
+  
+  .footer-left {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .footer-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-text-button {
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .footer-text-button:hover {
+    color: lightgray; /* Hover effect */
+  }
+  
+  .footer-button {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+  
+  .footer-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+  }
+  

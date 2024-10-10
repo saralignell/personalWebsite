@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     color: white;
-    overflow: hidden;
+    overflow: visible;
     
 }
 
@@ -128,8 +128,8 @@ h1 {
 /* Countdown Timer */
 .countdown-timer {
     position: absolute;
-    top: -1rem;
-    font-size: 2rem;
+    top: -2.5rem;
+    font-size: 1.5rem;
     color: #FFFFFF;
     font-family: 'Orbitron', sans-serif; /* Cool font, adjust as needed */
     z-index: 1000 !important;

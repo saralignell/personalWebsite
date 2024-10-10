@@ -4,6 +4,7 @@ import LandingPage from './LandingPage';
 import WorkExperience from './WorkExperience';
 import MyStory from './MyStory';
 import Navbar from './Navbar';
+import Footer from './Footer'; // Ensure footer is imported
 import './App.css';
 
 const App: React.FC = () => {
@@ -11,11 +12,16 @@ const App: React.FC = () => {
     <div className="custom-cursor"> {/* Apply custom cursor class */}
       <Router>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/work-experience" element={<WorkExperience />} />
-          <Route path="/my-story" element={<MyStory />} />
-        </Routes>
+        {/* Main content */}
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/work-experience" element={<WorkExperience />} />
+            <Route path="/my-story" element={<MyStory />} />
+          </Routes>
+        </div>
+        {/* Footer */}
+        <Footer />
       </Router>
     </div>
   );
