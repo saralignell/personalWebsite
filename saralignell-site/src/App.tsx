@@ -8,15 +8,16 @@ import './App.css';
 
 const App: React.FC = () => {
   return (
-    
-    <Router>
-      <Navbar /> {/* Navbar will now appear on every page */}
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/work-experience" element={<WorkExperience />} />
-        <Route path="/my-story" element={<MyStory />} />
-      </Routes>
-    </Router>
+    <div className="custom-cursor"> {/* Apply custom cursor class */}
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/work-experience" element={<WorkExperience />} />
+          <Route path="/my-story" element={<MyStory />} />
+        </Routes>
+      </Router>
+    </div>
   );
 };
 

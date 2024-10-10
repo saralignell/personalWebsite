@@ -7,6 +7,7 @@
     align-items: center;
     color: white;
     overflow: hidden;
+    
 }
 
 h1 {
@@ -15,7 +16,7 @@ h1 {
     font-family: 'Inter', sans-serif;
     z-index: 10;
     position: relative;
-    top: -5rem;
+    top: -8rem;
     background: rgba(232, 200, 251, 0.40);
 }
 
@@ -127,9 +128,9 @@ h1 {
 /* Countdown Timer */
 .countdown-timer {
     position: absolute;
-    bottom: 5rem;
-    font-size: 40rem;
+    top: -1rem;
+    font-size: 2rem;
     color: #FFFFFF;
     font-family: 'Orbitron', sans-serif; /* Cool font, adjust as needed */
-    z-index: 10;
+    z-index: 1000 !important;
 }

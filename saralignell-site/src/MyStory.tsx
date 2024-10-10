@@ -29,7 +29,7 @@ const MyStory: React.FC = () => {
         </div>
 
         <div className="page-crumple">
-          /* <img src={rippedTexture} alt="Ripped Texture" /> */
+           <img src={rippedTexture} alt="Ripped Texture" /> 
         </div>
 
         <div className="journal-page">

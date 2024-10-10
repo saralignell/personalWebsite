@@ -77,23 +77,21 @@ const LandingPage: React.FC = () => {
         (text as HTMLElement).style.opacity = "0"; // Fade out floating text
       });
 
-      setTimeout(() => {
-        setFinalTextVisible(true);
-        scrollToProjects();
-      }, 3000);
-    }, 10000); // 10 seconds delay (countdown duration)
+     // Show final text immediately after floating text fades out
+     setFinalTextVisible(true);
 
-    return () => {
-      clearTimeout(timeoutId);
-      clearInterval(countdownInterval);
-    };
-  }, []);
+     // Add 0.5 second delay before auto-scrolling to the project section
+     setTimeout(() => {
+       scrollToProjects(); // Auto-scroll to projects after 0.5 seconds
+     }, 1000); // 0.5 second delay before auto-scroll
+   }, 10000); // 10 seconds delay (countdown duration)
 
-  useEffect(() => {
-    if (finalTextVisible) {
-      scrollToProjects(); // Auto-scroll after the final text is shown
-    }
-  }, [finalTextVisible]);
+   return () => {
+     clearTimeout(timeoutId);
+     clearInterval(countdownInterval);
+   };
+ }, []);
+
 
   return (
     <div>
