@@ -2,7 +2,7 @@ import React from 'react';
 import './MyStory.css';
 import downArrow from './assets/DownArrows.svg'; 
 import MyStoryText from './assets/MyStoryText.svg';
-import rippedTexture from './assets/Crumple2.svg'
+import rippedTexture from './assets/Rippedtexture.svg'
 import journalIteslf from './assets/JournalItself.svg'
 import journalPen from './assets/FountainPen.svg'
 
@@ -29,7 +29,7 @@ const MyStory: React.FC = () => {
         </div>
 
         <div className="page-crumple">
-          <img src={rippedTexture} alt="Ripped Texture" />
+          /* <img src={rippedTexture} alt="Ripped Texture" /> */
         </div>
 
         <div className="journal-page">

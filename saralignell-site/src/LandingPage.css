@@ -1,8 +1,7 @@
+/* Landing Section */
 .landing-container {
     position: relative;
-    height: 88vh;
-    width: 99.5vw;
-
+    height: 100vh; /* Full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +52,7 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 99vw;
+    width: 100vw;
     height: 87vh;
     margin: auto;
     overflow: hidden;
@@ -96,7 +95,41 @@ h1 {
 }
 
 .slow-fade-in {
-    opacity: 1; /* Show the final text */
-    transform: scale(.75); /* Grow final text to normal size */
+    opacity: 1;
+    transform: scale(.75);
 }
 
+/* Project Section */
+.project-section {
+    padding: 50px;
+    background-color: white;
+    width: 100vw; /* Ensure full width */
+    min-height: 100vh; /* Full viewport height */
+}
+
+.project-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.03); /* Slight enlargement on hover */
+}
+
+/* Countdown Timer */
+.countdown-timer {
+    position: absolute;
+    bottom: 5rem;
+    font-size: 40rem;
+    color: #FFFFFF;
+    font-family: 'Orbitron', sans-serif; /* Cool font, adjust as needed */
+    z-index: 10;
+}
