@@ -142,11 +142,19 @@ h1 {
     font-family: 'Orbitron', sans-serif; /* Cool font, adjust as needed */
     z-index: 1000 !important;
 }
-.My-Work{
+.My-Work {
     position: absolute;
-    bottom: -9.5rem;
+    left: 50%; /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Translate to perfectly center it */
+    display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 5; 
-   
+    z-index: 5;
+    width: 50%; /* Allow it to resize with the screen */
+    max-width: 600px; /* Limit the maximum width */
+}
+@media (max-width: 768px) {
+    .My-Work {
+        width: 80%; /* Increase width on smaller screens */
+    }
 }

@@ -11,6 +11,7 @@ import reactNativeIcon from './assets/icons/reactnativeicon.svg';
 import figmaIcon from './assets/icons/figma.svg';
 import hoyaMockup from './assets/mockups/TheHoyaMockup.svg';
 import allowanceMockup from './assets/mockups/allowanceMockup2.svg';
+import Button from '@mui/material/Button';
 
 interface Project {
   title: string;
@@ -25,7 +26,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: "The Hoya Mobile",
-    description: "A modern portfolio project.",
+    description: "Creating a mobile app for Georgetown's largest student-run news publication using React Native and Wordpress api.",
     image: hoyaMockup,
     link: "#",
     buttonText: "View Project",
@@ -43,7 +44,7 @@ const projects: Project[] = [
   },
   {
     title: "Allowance Mobile",
-    description: "Another project with Angular.",
+    description: "Start Up redesign for mult-univeristy expansion.",
     image: allowanceMockup,
     link: "#",
     buttonText: "Read More",
@@ -53,7 +54,7 @@ const projects: Project[] = [
 
   {
     title: "ReStitch Web",
-    description: "A big, complex project.",
+    description: "yuh.",
     image: "https://via.placeholder.com/800x400",
     link: "#",
     buttonText: "View Project",
@@ -75,13 +76,16 @@ const ProjectCards: React.FC = () => {
         >
           <img src={project.image} alt={project.title} className="project-image" />
           <div className="project-content">
-            <h3>{project.title}</h3>
+          <div className="project-header">
+  <h3>{project.title}</h3>
+  <div className="tech-icons">
+    {project.techIcons.map((icon, idx) => (
+      <img key={idx} src={icon} alt={`tech-icon-${idx}`} className="tech-icon" />
+    ))}
+  </div>
+</div>
             <p>{project.description}</p>
-            <div className="tech-icons">
-              {project.techIcons.map((icon, idx) => (
-                <img key={idx} src={icon} alt={`tech-icon-${idx}`} className="tech-icon" />
-              ))}
-            </div>
+   
             <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-button">
               {project.buttonText}
             </a>

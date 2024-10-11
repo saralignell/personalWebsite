@@ -27,24 +27,22 @@
 }
 
 .project-content {
-  padding: 20px;
-  color: #333;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  color: #3E1339;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 
-.project-content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  font-family: 'Inter', sans-serif;
-}
+
 
 .project-content p {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #6c63ff; /* Purple color for description */
+  font-size: 1rem;
+  margin-bottom: .25rem;
+  margin-top: .25rem;
+  color: #3E1339; /* Purple color for description */
   font-family: 'Inter', sans-serif; /* Use Inter font */
   line-height: 1.5; /* Improve readability */
 }
@@ -52,24 +50,38 @@
 .project-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #E8C8FB;;
+  background-color: #E8C8FB;
   color: white;
   text-decoration: none;
   border-radius: 5px;
   text-align: center;
   margin-top: auto;
+  margin-bottom: 1.5rem;
   transition: background-color 0.3s ease;
   font-family: 'Inter', sans-serif;
 }
 
-.project-button:hover {
-  background-color: #f0f0f0;
+
+.project-header {
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between; /* Title on the left, icons on the right */
+  align-items: center;
+
+}
+
+.project-content h3 {
+  font-size: 1.8rem;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  line-height: 1.2; /* Adjust line-height to align with icons */
 }
 
 .tech-icons {
-  margin-top: 10px;
   display: flex;
+  align-items: center; /* Align icons vertically with text */
   gap: 10px;
+  filter: brightness(0) saturate(100%) invert(16%) sepia(25%) saturate(1532%) hue-rotate(260deg) brightness(87%) contrast(98%);
 }
 
 .tech-icon {

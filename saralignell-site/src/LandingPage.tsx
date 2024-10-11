@@ -112,13 +112,13 @@ clearInterval(countdownInterval);
         )}
       </div>
 
-      {/* Project Section */}
-      {/* Project Section */}
+      {/* My Work Section */}
       <div className="My-Work">
-          <img src={MyWork} alt="My Work" />
-        </div>
+        <img src={MyWork} alt="My Work" />
+      </div>
+
+      {/* Project Section */}
       <div ref={projectSectionRef} className="project-section">
- 
         <ProjectCards /> {/* Using the new ProjectCards component */}
       </div>
     </div>
