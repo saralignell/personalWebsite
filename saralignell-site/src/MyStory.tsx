@@ -1,8 +1,8 @@
 import React from 'react';
 import './MyStory.css';
 import downArrow from './assets/DownArrows.svg'; 
-import MyStoryText from './assets/MyStoryText.svg';
-import rippedTexture from './assets/Rippedtexture.svg'
+import MyStoryText from './assets/MyStoryDot.svg';
+import rippedTexture from './assets/crumple12.svg'
 import journalIteslf from './assets/JournalItself.svg'
 import journalPen from './assets/FountainPen.svg'
 

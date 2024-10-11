@@ -9,6 +9,14 @@
     overflow: visible;
     
 }
+.Sara-Is
+{
+    position: absolute;
+    top: 10rem;
+    justify-content: center;
+    z-index: 5;
+    background: rgba(232, 200, 251, 0.40);
+}
 
 h1 {
     font-size: 4rem;
@@ -61,7 +69,7 @@ h1 {
 
 .landing-buttons {
     position: absolute;
-    bottom: 15rem;
+    bottom: 20rem;
     justify-content: center;
     z-index: 5;
 }
@@ -80,7 +88,8 @@ h1 {
 }
 
 .landing-button:hover {
-    background: rgba(232, 200, 251, 0.6);
+    background: rgba(200, 200, 251, 0.6);
+  
 }
 
 .final-text {
@@ -102,7 +111,6 @@ h1 {
 
 /* Project Section */
 .project-section {
-    padding: 50px;
     background-color: white;
     width: 100vw; /* Ensure full width */
     min-height: 100vh; /* Full viewport height */
@@ -133,4 +141,12 @@ h1 {
     color: #FFFFFF;
     font-family: 'Orbitron', sans-serif; /* Cool font, adjust as needed */
     z-index: 1000 !important;
+}
+.My-Work{
+    position: absolute;
+    bottom: -9.5rem;
+    justify-content: center;
+    align-items: center;
+    z-index: 5; 
+   
 }

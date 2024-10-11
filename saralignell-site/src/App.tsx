@@ -1,26 +1,24 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './LandingPage';
-import WorkExperience from './WorkExperience';
 import MyStory from './MyStory';
 import Navbar from './Navbar';
-import Footer from './Footer'; // Ensure footer is imported
+import Footer from './Footer';
 import './App.css';
 
 const App: React.FC = () => {
+  const landingPageRef = useRef<{ scrollToProjects: () => void }>(null); // Create a ref to access the scroll function in LandingPage
+
   return (
-    <div className="custom-cursor"> {/* Apply custom cursor class */}
+    <div className="custom-cursor">
       <Router>
-        <Navbar />
-        {/* Main content */}
+        <Navbar onScrollToProjects={() => landingPageRef.current?.scrollToProjects()} />
         <div className="main-content">
           <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/work-experience" element={<WorkExperience />} />
+            <Route path="/" element={<LandingPage ref={landingPageRef} />} />
             <Route path="/my-story" element={<MyStory />} />
           </Routes>
         </div>
-        {/* Footer */}
         <Footer />
       </Router>
     </div>

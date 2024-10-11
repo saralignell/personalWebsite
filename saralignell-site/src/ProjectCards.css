@@ -1,0 +1,123 @@
+/* Container for all project cards */
+.project-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Define a 3-column grid */
+  grid-gap: 20px;
+  padding: 50px;
+  padding-top: 100px;
+}
+
+/* Individual project card */
+.project-card {
+  background-color: white;
+  border-radius: 0px; /* Slightly rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card img.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.project-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+.project-content p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #6c63ff; /* Purple color for description */
+  font-family: 'Inter', sans-serif; /* Use Inter font */
+  line-height: 1.5; /* Improve readability */
+}
+
+.project-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #E8C8FB;;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.project-button:hover {
+  background-color: #f0f0f0;
+}
+
+.tech-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.tech-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Staggered layout - larger and smaller cards */
+.project-card.large {
+  grid-column: span 2; /* Larger card takes 2 columns */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Split the large card into two halves */
+}
+
+.project-card.large img.project-image {
+  grid-column: 1 / 2; /* Image on the left */
+}
+
+.project-card.large .project-content {
+  grid-column: 2 / 3; /* Content on the right */
+}
+
+/* Small cards */
+.project-card.small {
+  grid-column: span 1; /* Smaller card takes 1 column */
+}
+
+/* Fade-in animations from different directions */
+.project-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card.from-left.fade-in {
+  transform: translateX(0);
+}
+
+.project-card.from-right.fade-in {
+  transform: translateX(0);
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .project-cards-container {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  }
+
+  .project-card.large {
+    grid-column: span 1; /* Make large cards full width on small screens */
+  }
+}
