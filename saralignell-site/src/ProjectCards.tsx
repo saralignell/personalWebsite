@@ -11,7 +11,7 @@ import reactNativeIcon from './assets/icons/reactnativeicon.svg';
 import figmaIcon from './assets/icons/figma.svg';
 import hoyaMockup from './assets/mockups/TheHoyaMockup.svg';
 import allowanceMockup from './assets/mockups/allowanceMockup2.svg';
-import Button from '@mui/material/Button';
+
 
 interface Project {
   title: string;

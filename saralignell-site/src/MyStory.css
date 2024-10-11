@@ -1,108 +1,102 @@
-body{
-  overflow-x: hidden; /* Disable horizontal scrolling */
+/* General Layout */
+.my-story-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.my-story-container {
-    padding-left: 15rem;
-    padding-right: 15rem;
-    padding-top: 0px;
-  
-  }
-  
-  .video-container {
-    position: relative;
-    width: 100%;
-    height: 650px; /* Set fixed height to control video cropping */
-    max-width: 1000px;
-    margin: 0 auto;
+.section {
+  padding: 2rem 15rem; /* General padding for all sections */
+}
+
+/* Video Section */
+.video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px; /* Height for the video section */
+  background-color: #e8c8fb;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 650px; /* Set fixed height to control video cropping */
+  max-width: 1000px;
+margin: 0 auto;
     overflow: hidden; /* Hide any overflow */
-  }
-  
-  .background-video {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensures video covers the container fully */
+}
+
+.background-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures video covers the container fully */
     object-position: bottom right; /* Crop from the top left */
     filter: blur(1.2px); /* Add a slight blur effect */
     position: absolute;
     bottom:20px; /* Anchor to the top */
     right: 0; /* Align to the left to remove black bar */
-  }
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(232, 200, 251, 0.4) 0%, rgba(232, 200, 251, 0.4) 100%);
+  z-index: 2;
+}
+
+/* Journal Section */
+.journal-section {
+  display: flex;
+ 
   
-  .gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      0deg, 
-      rgba(232, 200, 251, 0.4) 0%, 
-      rgba(232, 200, 251, 0.4) 100%
-    ); /* Gradient based on #E8C8FB */
-    z-index: 2; /* Ensure the gradient is layered on top of the video */
-    pointer-events: none; /* Allows interaction with video */
-  }
+  background-color: #fff;
+  position: relative;
+  padding-bottom: 5rem; /* Extra padding to make space for the journal graphics */
+}
+
+.text-container {
+  width: 80%;
+}
+
+.my-story-text, .down-arrow
+{
+  position: relative;
   
-  .resizable {
-    resize: both; /* Allow the element to be resizable */
-    overflow: auto; /* Handle any overflow during resizing */
-    max-width: 100%; /* Ensure resizing is responsive */
-    padding: 20px;
+}
+ .page-crumple, .journal-page, .journal-pen {
+  position: relative;
 
-    border-radius: 10px;
-    font-family: 'Inter', sans-serif;
-    color: white;
-    margin-top: 20px;
-  }
-  .down-arrow {
-    position: absolute;
-    bottom: -.5rem; /* Position at the bottom of the video */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    animation: bounce 2s infinite; /* Add a subtle bounce animation */
-  }
-  
-  .my-story-text {
-    position: absolute;
-    bottom: 21rem; /* Position at the bottom of the video */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    animation: bounce 2s infinite; /* Add a subtle bounce animation */
-  }
-  .page-crumple {
-    position: absolute;
-    bottom: -68rem; /* Position at the bottom of the video */
-    left: 0;
-    z-index: 1;
-   width: 100%;
-  }
+  z-index: 3;
+}
 
-  .journal-page {
-    position: absolute;
-    bottom: -130rem; /* Position at the bottom of the video */
-    left: -20%;
-    z-index: 1;
-  }
-  .journal-pen {
-    position: absolute;
-    bottom: -90rem; /* Position at the bottom of the video */
-    right: -62%;
-    z-index: 1;
-   width: 80%;
-  }
+.journal-text-section {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
 
-  .journal-text-section {
-    display: flex;
-    
-    position: absolute;
-    bottom: -23rem; /* Position at the bottom of the video */
-    z-index: 10;
-   width: 80%;
+ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
 
-  }
+/* Instagram Section */
+.instagram-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 3rem 0;
+}
 
+.lightwidget-widget {
+  width: 100%;
+  max-width: 600px;
+  height: 500px;
+  border: 0;
+}
 
-  
