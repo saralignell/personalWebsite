@@ -29,16 +29,16 @@ const projects: Project[] = [
     description: "Creating a mobile app for Georgetown's largest student-run news publication using React Native and Wordpress api.",
     image: hoyaMockup,
     link: "#",
-    buttonText: "View Project",
+    buttonText: "VIEW PROJECT",
     techIcons: [ reactNativeIcon, wordpressIcon, AWSicon],
     size: 'large' // This project is a small card
   },
   {
     title: "GoodOnBaby",
-    description: "I designed the whole interface for an E-Commerce startup.",
+    description: "I designed the whole interface for an E-Commerce startup. Yeah and i will have at least one more sentance here. YUH Yeah and i will have at least one more sentance here. YUH yeahhhhhhhh yeahhhhhhhhhhhhhhh",
     image: gOb,
     link: "https://goodonbaby.com/",
-    buttonText: "View Site",
+    buttonText: "VIEW SITE",
     techIcons: [shopifyIcon, reactIcon],
     size: 'small' // This project is a large card
   },
@@ -47,7 +47,7 @@ const projects: Project[] = [
     description: "Start Up redesign for mult-univeristy expansion.",
     image: allowanceMockup,
     link: "#",
-    buttonText: "Read More",
+    buttonText: "READ MORE",
     techIcons: [ figmaIcon, reactNativeIcon],
     size: 'small' // This project is a small card
   },
@@ -57,7 +57,7 @@ const projects: Project[] = [
     description: "yuh.",
     image: "https://via.placeholder.com/800x400",
     link: "#",
-    buttonText: "View Project",
+    buttonText: "VIEW PROJECT",
     techIcons: [ nextJSIcon, firebaseIcon],
     size: 'large' // This project is a large card
   },

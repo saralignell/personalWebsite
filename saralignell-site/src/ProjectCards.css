@@ -5,19 +5,22 @@
   grid-gap: 20px;
   padding: 50px;
   padding-top: 100px;
+  
 }
 
 /* Individual project card */
 .project-card {
   background-color: white;
-  border-radius: 0px; /* Slightly rounded corners */
+  border-radius: 1px; /* Slightly rounded corners */
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: none !important;
+
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
   display: flex;
   flex-direction: column;
+  border: 1px solid #E8C8FB; /* Subtle outline */
 }
 
 .project-card img.project-image {
@@ -27,8 +30,8 @@
 }
 
 .project-content {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   color: #3E1339;
   display: flex;
   flex-direction: column;
@@ -53,12 +56,13 @@
   background-color: #E8C8FB;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 1px;
   text-align: center;
   margin-top: auto;
   margin-bottom: 1.5rem;
   transition: background-color 0.3s ease;
   font-family: 'Inter', sans-serif;
+  font-size: .87rem;
 }
 
 

@@ -106,8 +106,8 @@ clearInterval(countdownInterval);
         {/* Display buttons only after animation is complete */}
         {finalTextVisible && (
           <div className="landing-buttons">
-            <Link to="#" className="landing-button" onClick={() => projectSectionRef.current?.scrollIntoView({ behavior: 'smooth' })}>My Work</Link>
-            <Link to="/my-story" className="landing-button">My Story</Link>
+            <Link to="#" className="landing-button" onClick={() => projectSectionRef.current?.scrollIntoView({ behavior: 'smooth' })}>MY WORK</Link>
+            <Link to="/my-story" className="landing-button">MY STORY</Link>
           </div>
         )}
       </div>
